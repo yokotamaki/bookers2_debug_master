@@ -4,7 +4,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book_new = Book.new #部分テンプレート
     @user = @book.user #部分テンプレート
-    @comment = Comment.new #コメント入力フォーム
+    @book_comment = BookComment.new #コメント入力フォーム
   end
 
   def index
