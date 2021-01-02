@@ -2,8 +2,9 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    @book2 = Book.new
-    @user = @book.user
+    @book_new = Book.new #部分テンプレート
+    @user = @book.user #部分テンプレート
+    @comment = Comment.new #コメント入力フォーム
   end
 
   def index
