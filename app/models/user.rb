@@ -55,9 +55,13 @@ class User < ApplicationRecord
   def prefecture_name=(prefecture_name)
     self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
   end
-  
+
   attachment :profile_image, destroy: false
 
   validates :name, length: {maximum: 20, minimum: 2}, uniqueness: true
   validates :introduction, length: {maximum: 50}
+  validates :postcode, presence: true
+  validates :prefecture_code, presence: true
+  validates :address_city, presence: true
+  validates :address_street, presence: true
 end
