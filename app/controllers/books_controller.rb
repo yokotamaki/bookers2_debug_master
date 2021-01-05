@@ -2,7 +2,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    @book_new = Book.new #部分テンプレート
+    @book_new = Book.new #本の投稿フォーム 部分テンプレート
     @user = @book.user #部分テンプレート
     @book_comment = BookComment.new #コメント入力フォーム
   end
