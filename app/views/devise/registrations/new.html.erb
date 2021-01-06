@@ -18,11 +18,11 @@
         </div>
         <div class="field">
           <%= f.label :prefecture_name, 'Prefecture' %><br />
-          <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: '選択してください' }, class: 'form-control', autofocus: true, id: 'user_prefecture_code' %>
+          <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: '選択してください' }, autofocus: true, id: 'user_prefecture_code' %>
         </div>
         <div class="field">
           <%= f.label :address_city, 'City' %><br />
-          <%= f.text_field :address_city, autofocus: true, id: "user_address_city" %>
+          <%= f.text_field :address_city, id: "user_address_city" %>
         </div>
         <div class="field">
           <%= f.label :address_street, 'Street' %><br />
